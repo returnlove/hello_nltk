@@ -22,6 +22,7 @@ def process_content():
 	words = word_tokenize(text)
 	words = words[:500]
 	tagged = nltk.pos_tag(words)
+	# pass the POS tagged to named entity
 	namedEnt = nltk.ne_chunk(tagged, binary = True)
 	# namedEnt = nltk.ne_chunk(tagged)
 
