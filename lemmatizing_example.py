@@ -1,3 +1,10 @@
+'''
+A very similar operation to stemming is called lemmatizing. 
+The major difference between these is, as you saw earlier, stemming can often create non-existent words, 
+whereas lemmas are actual words.
+'''
+
+
 from nltk.stem import WordNetLemmatizer
 
 
