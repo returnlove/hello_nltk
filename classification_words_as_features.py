@@ -57,7 +57,16 @@ def main():
 
 	# print(my_dict)
 
-	print(featuresets[0])
+	# print(featuresets[0])
+
+	training_set = featuresets[:1900]
+
+	testing_set = featuresets[1900:]
+
+	clf = nltk.NaiveBayesClassifier.train(training_set)
+	print("Classifier test percentage: ", (nltk.classify.accuracy(clf, testing_set))*100)
+
+	clf.show_most_informative_features(15)
 	
 
 if __name__ == "__main__":
